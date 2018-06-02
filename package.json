@@ -9,7 +9,7 @@
     "clean": "npx lerna clean --yes && npx lerna run clean --stream --parallel --include-filtered-dependencies",
     "commit": "node @commitlint/prompt-cli/cli.js",
     "commitmsg": "node @commitlint/cli/lib/cli.js -e $GIT_PARAMS",
-    "pre-push": "echo $GIT_PARAMS",
+    "prepush": "echo $HUSKY_GIT_STDIN",
     "deps": "lerna run deps",
     "pkg": "lerna run pkg",
     "docs": "docsify serve docs",
